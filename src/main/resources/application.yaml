@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: local
+    password: local
+    url: jdbc:postgresql://localhost:5432/teacher
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      acks: all
+      batch-size: 1048576
+      buffer-memory: 2097152
+      retries: 3
+      client-id: '${pod.name}_${pod.namespace}_${pod.id}'
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+        max.in.flight.requests.per.connection: 2
+      topics:
+        course: course-recreations-confirmation
+
