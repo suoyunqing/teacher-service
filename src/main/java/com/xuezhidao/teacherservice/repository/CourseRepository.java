@@ -1,4 +1,4 @@
-package com.xuezhidao.teacherservice.service;
+package com.xuezhidao.teacherservice.repository;
 
 import com.xuezhidao.teacherservice.entity.CoureseEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

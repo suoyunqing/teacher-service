@@ -6,6 +6,7 @@ import com.xuezhidao.teacherservice.entity.CoureseEntity;
 import com.xuezhidao.teacherservice.eventbus.EventBus;
 import com.xuezhidao.teacherservice.exception.CoureseNotExistException;
 import com.xuezhidao.teacherservice.exception.CoureseStatusException;
+import com.xuezhidao.teacherservice.repository.CourseRepository;
 import jakarta.persistence.PersistenceException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

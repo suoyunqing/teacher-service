@@ -6,6 +6,7 @@ import com.xuezhidao.teacherservice.entity.CoureseEntity;
 import com.xuezhidao.teacherservice.eventbus.EventBus;
 import com.xuezhidao.teacherservice.exception.CoureseNotExistException;
 import com.xuezhidao.teacherservice.exception.CoureseStatusException;
+import com.xuezhidao.teacherservice.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
