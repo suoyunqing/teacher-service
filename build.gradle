@@ -30,6 +30,9 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.kafka:spring-kafka-test'
+
+    testImplementation 'io.zonky.test:embedded-database-spring-test:2.2.0'
+    testImplementation 'io.zonky.test:embedded-postgres:2.0.3'
 }
 
 tasks.named('test') {
