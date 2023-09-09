@@ -9,6 +9,7 @@ import com.xuezhidao.teacherservice.exception.CoureseStatusException;
 import com.xuezhidao.teacherservice.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -25,6 +26,7 @@ public class CourseService {
     @Autowired
     private EventBus eventBus;
 
+    @Transactional
     public void recreateCourse(CourseDto courseDto) {
         Optional<CoureseEntity> coureseEntityOptional = courseRepository.findById(courseDto.getCourseId());
         CoureseEntity coureseEntity = coureseEntityOptional.orElseThrow(() -> new CoureseNotExistException(String.format("课程 %s 不存在", courseDto.getCourseId())));
