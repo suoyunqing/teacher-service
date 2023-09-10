@@ -18,8 +18,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(TeacherController.class)
-class TeacherControllerTest {
+@WebMvcTest(CourseContractsController.class)
+class CourseContractsControllerTest {
 
     public static final String COURSE_RECREATIONS_API = "/course-contracts/{cid}/course-recreations/{rid}/confirmation";
     public static final String COURSE_RECREATIONS_REQUESTBODY =

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Validated
 @RestController
-public class TeacherController {
+public class CourseContractsController {
 
     @Autowired
     private CourseService courseService;
