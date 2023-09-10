@@ -3,7 +3,6 @@ package com.xuezhidao.teacherservice.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
 
@@ -13,16 +12,16 @@ import org.hibernate.validator.constraints.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "course")
-public class CoureseEntity {
+@Table(name = "course_recreation")
+public class CourseRecreationEntity {
 
     @Id
     @UUID
     private String id;
 
-    private String content;
+    private String courseId;
 
     private String submissionTime;
 
-    private String status;
+    private String content;
 }
